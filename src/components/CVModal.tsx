@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { X, Printer, Download, Mail, Phone, ExternalLink } from 'lucide-react';
+import { X, Printer, Mail, Phone, ExternalLink } from 'lucide-react';
 import { PortfolioData } from '../types';
 
 interface CVModalProps {
@@ -62,7 +62,7 @@ export default function CVModal({ data, isOpen, onClose }: CVModalProps) {
             <div className="text-xs font-mono space-y-1.5 text-zinc-700 w-full md:w-auto border-t md:border-t-0 pt-4 md:pt-0 border-zinc-200">
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-zinc-900" />
-                <span>{data.personalInfo.contactEmail}</span>
+                <a href={`mailto:${data.personalInfo.contactEmail}`} className="underline hover:text-secondary transition-colors">{data.personalInfo.contactEmail}</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-zinc-900" />
@@ -255,7 +255,7 @@ export default function CVModal({ data, isOpen, onClose }: CVModalProps) {
           {/* Footer of CV */}
           <div className="text-center border-t border-zinc-200 pt-6 mt-4">
             <p className="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">
-              Hugo Carnicero // Especialista en Ciberseguridad // hugocarni2004@gmail.com
+              Hugo Carnicero // Especialista en Ciberseguridad // <a href={`mailto:${data.personalInfo.contactEmail}`} className="underline hover:text-zinc-700 transition-colors">{data.personalInfo.contactEmail}</a>
             </p>
           </div>
         </div>
