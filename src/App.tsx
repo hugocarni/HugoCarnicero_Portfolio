@@ -5,7 +5,6 @@ import {
   Shield,
   Code,
   Network,
-  Download,
   Eye,
   Mail,
   Linkedin,
@@ -17,7 +16,6 @@ import {
 } from 'lucide-react';
 import { initialPortfolioData } from './data';
 import { PortfolioData } from './types';
-import CVModal from './components/CVModal';
 
 export default function App() {
   const data: PortfolioData = initialPortfolioData;
@@ -34,7 +32,7 @@ export default function App() {
     ''
   ]);
   const [activeSection, setActiveSection] = useState('intro');
-  const [cvOpen, setCvOpen] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
 
   // Refs
   const terminalHistoryEndRef = useRef<HTMLDivElement>(null);
@@ -73,6 +71,13 @@ export default function App() {
       terminalHistoryEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [terminalHistory]);
+
+  // Copy email to clipboard
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(data.personalInfo.contactEmail);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
 
   // Terminal command prompt handling
   const handleTerminalSubmit = (e: FormEvent) => {
@@ -128,10 +133,9 @@ export default function App() {
       case 'cv':
         newHistory.push(
           'PROCESANDO SOLICITUD DE CV...',
-          'Abriendo modulo visual de Currículum en primer plano...'
+          'Abriendo PDF del Currículum en nueva pestaña...'
         );
-        setCvOpen(true);
-        setTerminalOpen(false);
+        window.open('/CV_Carta_HugoCarnicero.pdf', '_blank');
         break;
       case 'clear':
         setTerminalHistory(['Consola de sistemas reseteada con éxito.', '']);
@@ -207,24 +211,24 @@ export default function App() {
             </motion.button>
 
             {/* Currículum Button */}
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setCvOpen(true)}
+            <a
+              href="/CV_Carta_HugoCarnicero.pdf"
+              target="_blank"
+              rel="noreferrer"
               className="p-2 text-primary hover:text-white transition-colors cursor-pointer rounded-none bg-[#111] border border-[#333] flex items-center gap-1.5"
               title="Ver Currículum"
             >
               <FileText className="w-4 h-4" />
               <span className="hidden sm:inline font-mono text-[10px] uppercase tracking-wider">Ver CV</span>
-            </motion.button>
+            </a>
 
             {/* Quick Contact Action Button */}
-            <a
-              href={`mailto:${data.personalInfo.contactEmail}`}
-              className="bg-secondary text-[#0a0a0a] px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider rounded-none font-bold hover:scale-102 active:scale-98 transition-all text-center border border-[#333]"
+            <button
+              onClick={handleCopyEmail}
+              className="bg-secondary text-[#0a0a0a] px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider rounded-none font-bold hover:scale-102 active:scale-98 transition-all text-center border border-[#333] cursor-pointer"
             >
-              Contacto
-            </a>
+              {copiedEmail ? 'Copiado!' : 'Contacto'}
+            </button>
           </div>
         </div>
       </header>
@@ -601,13 +605,13 @@ export default function App() {
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-6">
-              <a
-                href={`mailto:${data.personalInfo.contactEmail}`}
+              <button
+                onClick={handleCopyEmail}
                 className="w-full sm:w-auto bg-[#111] hover:bg-[#1c1c1c] text-white border border-[#333] px-8 py-3.5 font-mono text-xs rounded-none font-bold text-center flex items-center justify-center gap-2 uppercase tracking-widest cursor-pointer"
               >
                 <Mail className="w-4 h-4 text-secondary" />
-                Contactar vía Email
-              </a>
+                {copiedEmail ? 'Email Copiado!' : 'Contactar vía Email'}
+              </button>
               {data.personalInfo.whatsAppUrl && (
                 <a
                   href={data.personalInfo.whatsAppUrl}
@@ -639,7 +643,7 @@ export default function App() {
         <div className="flex space-x-10 my-4 md:my-0">
           <a href={data.personalInfo.githubUrl} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-secondary transition-colors font-mono">GitHub</a>
           <a href={data.personalInfo.linkedinUrl} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-secondary transition-colors font-mono">LinkedIn</a>
-          <a href={`mailto:${data.personalInfo.contactEmail}`} className="text-zinc-400 hover:text-secondary transition-colors font-mono">Email</a>
+          <button onClick={handleCopyEmail} className="text-zinc-400 hover:text-secondary transition-colors font-mono cursor-pointer bg-transparent border-none p-0">Email</button>
         </div>
         <div className="text-zinc-500">Designed for Precision</div>
       </footer>
@@ -716,15 +720,6 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* ========================================================= */}
-      {/* SECTION: CURRÍCULUM VITAE HIGH FIDELITY VISOR */}
-      {/* ========================================================= */}
-      <CVModal 
-        data={data}
-        isOpen={cvOpen}
-        onClose={() => setCvOpen(false)}
-      />
 
     </div>
   );
