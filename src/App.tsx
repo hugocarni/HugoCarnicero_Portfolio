@@ -223,12 +223,12 @@ export default function App() {
             </a>
 
             {/* Quick Contact Action Button */}
-            <button
-              onClick={handleCopyEmail}
-              className="bg-secondary text-[#0a0a0a] px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider rounded-none font-bold hover:scale-102 active:scale-98 transition-all text-center border border-[#333] cursor-pointer"
+            <a
+              href="#contact"
+              className="bg-secondary text-[#0a0a0a] px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider rounded-none font-bold hover:scale-102 active:scale-98 transition-all text-center border border-[#333] cursor-pointer inline-block"
             >
-              {copiedEmail ? 'Copiado!' : 'Contacto'}
-            </button>
+              Contacto
+            </a>
           </div>
         </div>
       </header>
@@ -646,7 +646,7 @@ export default function App() {
         <div className="flex space-x-10 my-4 md:my-0">
           <a href={data.personalInfo.githubUrl} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-secondary transition-colors font-mono">GitHub</a>
           <a href={data.personalInfo.linkedinUrl} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-secondary transition-colors font-mono">LinkedIn</a>
-          <button onClick={handleCopyEmail} className="text-zinc-400 hover:text-secondary transition-colors font-mono cursor-pointer bg-transparent border-none p-0">{data.personalInfo.contactEmail}</button>
+          <button onClick={handleCopyEmail} className="text-zinc-400 hover:text-secondary transition-colors font-mono cursor-pointer bg-transparent border-none p-0">{copiedEmail ? 'Copiado!' : data.personalInfo.contactEmail}</button>
         </div>
         <div className="text-zinc-500">Designed for Precision</div>
       </footer>
