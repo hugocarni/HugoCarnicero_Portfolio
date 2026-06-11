@@ -31,7 +31,7 @@ export const initialPortfolioData: PortfolioData = {
       title: "Especialización en Ciberseguridad",
       subtitle: "IES El Cañaveral, Móstoles",
       dateRange: "2025 - 2026",
-      description: "Especialización de Postgrado enfocada en seguridad ofensiva y defensiva. Análisis avanzado de vulnerabilidades, respuesta ante incidentes, criptografía aplicada, bastionado de sistemas informáticos complejos y auditoría bajo el Esquema Nacional de Seguridad (ENS) e ISO 27001.",
+      description: "Postgrado finalizado en seguridad ofensiva y defensiva. Análisis avanzado de vulnerabilidades, respuesta ante incidentes, criptografía aplicada, bastionado de sistemas informáticos complejos y auditoría bajo el Esquema Nacional de Seguridad (ENS) e ISO 27001.",
       type: "security",
       category: "education"
     },

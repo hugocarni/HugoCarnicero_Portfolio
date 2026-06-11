@@ -1,0 +1,35 @@
+
+
+---
+
+[Fecha]
+
+[Nombre de la Empresa]
+[Dirección]
+
+**Asunto: Carta de Motivación — Especialista en Ciberseguridad & Desarrollador Web**
+
+Estimado/a equipo de [Nombre de la Empresa],
+
+Me dirijo a ustedes con el interés de formar parte de su equipo como Especialista en Ciberseguridad y/o Desarrollador Web. Recientemente he finalizado la Especialización en Ciberseguridad (postgrado) en IES El Cañaveral, y actualmente trabajo como Desarrollador Web en Center Tecnificación, donde desarrollo y mantengo aplicaciones y portales web corporativos.
+
+Mi perfil se sitúa en el nexo entre el desarrollo de software seguro y la administración de redes corporativas. Cuento con una sólida base técnica gracias a mi formación como Técnico Superior en Desarrollo de Aplicaciones Web (DAW) y mi experiencia previa en soporte de sistemas y redes. Esto me permite abordar los desafíos de seguridad desde una perspectiva integral, entendiendo tanto el código como la infraestructura que lo sostiene.
+
+**¿Qué puedo aportar?**
+
+- Experiencia en desarrollo full-stack con enfoque en buenas prácticas de seguridad: session management, saneamiento de consultas SQL, hardening de servidores.
+- Conocimientos en bastionado de sistemas Linux/Windows, respuesta ante incidentes y cumplimiento con ENS e ISO 27001.
+- Capacidad comprobada para resolver incidencias complejas, automatizar procesos y trabajar en entornos multidisciplinares.
+- Perfil autodidacta, metódico y con compromiso real por la calidad del código y la seguridad de los sistemas.
+
+Entre mis proyectos destacan el desarrollo de VIRAL-CHALLENGE, una red social de retos diarios, y la simulación de tuberías DevSecOps con escaneo SAST y monitorización de cumplimiento normativo.
+
+Estoy abierto a cualquier modalidad (presencial, híbrido o remoto) y con disponibilidad inmediata. Agradecería la oportunidad de conversar en una entrevista para detallar cómo mi experiencia puede alinearse con las necesidades de [Nombre de la Empresa].
+
+Quedo a su disposición para cualquier aclaración adicional.
+
+Atentamente,
+
+Hugo Carnicero
+hugocarni2004@gmail.com | +34 611 405 105
+linkedin.com/in/hugocarni | github.com/hugocarni
