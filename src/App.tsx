@@ -604,13 +604,16 @@ export default function App() {
               Actualmente busco nuevas oportunidades donde aplicar mi experiencia técnica en el nexo estratégico entre el desarrollo de software seguro y la administración de redes corporativas.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 pt-6">
+            <div className="flex flex-col items-center gap-3 pt-4">
+              <p className="font-mono text-xs text-secondary tracking-wider font-bold">
+                {data.personalInfo.contactEmail}
+              </p>
               <button
                 onClick={handleCopyEmail}
                 className="w-full sm:w-auto bg-[#111] hover:bg-[#1c1c1c] text-white border border-[#333] px-8 py-3.5 font-mono text-xs rounded-none font-bold text-center flex items-center justify-center gap-2 uppercase tracking-widest cursor-pointer"
               >
                 <Mail className="w-4 h-4 text-secondary" />
-                {copiedEmail ? 'Email Copiado!' : 'Contactar vía Email'}
+                {copiedEmail ? 'Copiado!' : 'Copiar Email'}
               </button>
               {data.personalInfo.whatsAppUrl && (
                 <a
@@ -643,7 +646,7 @@ export default function App() {
         <div className="flex space-x-10 my-4 md:my-0">
           <a href={data.personalInfo.githubUrl} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-secondary transition-colors font-mono">GitHub</a>
           <a href={data.personalInfo.linkedinUrl} target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-secondary transition-colors font-mono">LinkedIn</a>
-          <button onClick={handleCopyEmail} className="text-zinc-400 hover:text-secondary transition-colors font-mono cursor-pointer bg-transparent border-none p-0">Email</button>
+          <button onClick={handleCopyEmail} className="text-zinc-400 hover:text-secondary transition-colors font-mono cursor-pointer bg-transparent border-none p-0">{data.personalInfo.contactEmail}</button>
         </div>
         <div className="text-zinc-500">Designed for Precision</div>
       </footer>
