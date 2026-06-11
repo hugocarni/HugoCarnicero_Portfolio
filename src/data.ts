@@ -75,6 +75,15 @@ export const initialPortfolioData: PortfolioData = {
   projects: [
     {
       id: "proj1",
+      title: "VIRAL-CHALLENGE",
+      description: "Red social de retos diarios donde cada 24 horas cambia el desafío. Los usuarios pueden participar en diferentes categorías, subir sus resultados y competir en una plataforma dinámica con temática renovada cada día.",
+      imageUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600",
+      tags: ["React", "Node.js", "MongoDB", "Social Network"],
+      actionText: "Ver en GitHub",
+      actionUrl: "https://github.com/hugocarni/VIRAL-CHALLENGE"
+    },
+    {
+      id: "proj2",
       title: "Entorno Automatizado DevSecOps",
       description: "Simulación de tuberías de desarrollo seguro con escaneos de código estático automatizados (SAST), bastionado proactivo de servidores Linux y monitorización centralizada del cumplimiento con normas ISO 27001.",
       imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=600",
@@ -83,7 +92,7 @@ export const initialPortfolioData: PortfolioData = {
       actionUrl: "#"
     },
     {
-      id: "proj2",
+      id: "proj3",
       title: "Portal Web Seguro & Base de Datos MySQL",
       description: "Desarrollo completo de un sitio web funcional con gestión segura de sesiones, sanamiento de consultas de base de datos SQL para prevenir inyecciones maliciosas y diseño adaptativo con Bootstrap.",
       imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600",
@@ -92,7 +101,7 @@ export const initialPortfolioData: PortfolioData = {
       actionUrl: "#"
     },
     {
-      id: "proj3",
+      id: "proj4",
       title: "Infraestructura de Red Multi-Servidor Linux/Windows",
       description: "Maquetación integral de redes organizacionales virtuales. Implementación de controladores de dominio Directorio Activo (Active Directory) en Windows Server y servidores proxy e interceptación de tráfico en Linux.",
       imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600",
