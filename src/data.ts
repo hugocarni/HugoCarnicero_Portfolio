@@ -77,7 +77,7 @@ export const initialPortfolioData: PortfolioData = {
       id: "proj1",
       title: "VIRAL-CHALLENGE",
       description: "Red social de retos diarios donde cada 24 horas cambia el desafío. Los usuarios pueden participar en diferentes categorías, subir sus resultados y competir en una plataforma dinámica con temática renovada cada día.",
-      imageUrl: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80&w=600",
+      imageUrl: "https://github.com/hugocarni/VIRAL-CHALLENGE/blob/main/img/Captura2.PNG",
       tags: ["React", "Node.js", "MongoDB", "Social Network"],
       actionText: "Ver en GitHub",
       actionUrl: "https://github.com/hugocarni/VIRAL-CHALLENGE"
