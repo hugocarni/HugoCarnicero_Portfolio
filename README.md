@@ -1,6 +1,11 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:0284c7&height=200&section=header&text=Hugo%20Carnicero&fontSize=50&fontColor=ffffff&fontAlignY=35&desc=Especialista%20en%20Ciberseguridad%20%26%20Desarrollador%20Web&descAlignY=55&descSize=16" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,100:0284c7&height=200&section=header" />
 </div>
+
+<h1 align="center">Hugo Carnicero</h1>
+<p align="center">
+  <b>Especialista en Ciberseguridad & Desarrollador Web</b>
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&pause=1000&color=0EA5E9&center=true&vCenter=true&width=500&lines=Especialista+en+Ciberseguridad;Desarrollador+Web;DevSecOps+%26+Bastionado+Sistemas;ENS+%26+ISO+27001" alt="Typing SVG" />
