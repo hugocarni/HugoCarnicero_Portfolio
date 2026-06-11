@@ -77,8 +77,8 @@ export const initialPortfolioData: PortfolioData = {
       id: "proj1",
       title: "VIRAL-CHALLENGE",
       description: "Red social de retos diarios donde cada 24 horas cambia el desafío. Los usuarios pueden participar en diferentes categorías, subir sus resultados y competir en una plataforma dinámica con temática renovada cada día.",
-      imageUrl: "https://github.com/hugocarni/VIRAL-CHALLENGE/blob/main/img/Captura2.PNG",
-      tags: ["React", "Node.js", "MongoDB", "Social Network"],
+      imageUrl: "https://github.com/hugocarni/VIRAL-CHALLENGE/blob/main/img/Captura2.PNG?raw=true",
+      tags: ["PHP", "JavaScript", "MySQL", "Social Network", "Bootstrap"],
       actionText: "Ver en GitHub",
       actionUrl: "https://github.com/hugocarni/VIRAL-CHALLENGE"
     },
@@ -100,15 +100,6 @@ export const initialPortfolioData: PortfolioData = {
       actionText: "Ver Proyecto",
       actionUrl: "#"
     },
-    {
-      id: "proj4",
-      title: "Infraestructura de Red Multi-Servidor Linux/Windows",
-      description: "Maquetación integral de redes organizacionales virtuales. Implementación de controladores de dominio Directorio Activo (Active Directory) en Windows Server y servidores proxy e interceptación de tráfico en Linux.",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600",
-      tags: ["Windows Server", "Linux", "Active Directory", "Cisco Tracer"],
-      actionText: "Ver Topología",
-      actionUrl: "#"
-    }
   ],
   skillsMatrix: [
     {
